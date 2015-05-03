@@ -1,0 +1,32 @@
+// Add the following lines to your module's build.gradle
+// right after apply plugin: 'com.android.library' line.
+// Change everything to your
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'YOUR_BINTRAY_REPOSITORY_NAME' // for example, fb-like
+
+    publishedGroupId = 'YOUR_LIBRARY_GROUP_ID'   // for example, com.mydomain.lib
+    libraryName = 'YOUR_PRETTY_LIBRARY_NAME'     // for example, FBLike
+    artifact = 'YOUR_LIBRARY_ARTIFACT_ID'        // for example, fb-like
+
+    libraryDescription = 'YOUR_LIBRARY_DESCRIPTION'
+
+    siteUrl = 'YOUR_PROJECT_URL'                 // for example, https://github.com/nuuneoi/FBLikeAndroid
+    gitUrl = 'YOUR_GIT_URL'                      // for example, https://github.com/nuuneoi/FBLikeAndroid.git
+
+    libraryVersion = 'YOUR_LIBRARY_VERSION'      // for example, 0.9.3
+
+    developerId = 'YOUR_USERNAME'                // for example, nuuneoi
+    developerName = 'YOUR_FULLNAME'              // for example, Sittiphol Phanvilai
+    developerEmail = 'YOUR_EMAIL'                // for example, sittiphol@gmail.com
+
+    licenseName = 'YOUR_LICENSE_NAME'            // for example, The Apache Software License, Version 2.0
+    licenseUrl = 'YOUR_LICENSE_URL'              // for example, http://www.apache.org/licenses/LICENSE-2.0.txt
+    allLicenses = ARRAY_OF_LICENSES              // for example, ["Apache-2.0"]
+}
+
+// And then add two lines below at the end of file
+
+apply from: '../install.gradle'
+apply from: '../bintray.gradle'
